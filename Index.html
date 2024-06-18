@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Food Delivery service</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<div class="container-fluid">
+<div class="row  align-items-center">
+<nav class="navbar py-lg-1 py-md-3 ps-md-3 py-sm-3 px-lg-4 pe-4 ps-3 py-3 me-0 justify-content-lg-start justify-content-md-between justify-content-sm-between">
+  <div class="col-xl-2 col-md-3 col-7 d-flex align-items-center">
+    <a class="navbar-brand d-none d-lg-block d-md-block d-sm-block" href="#"><img src="images/logo-dark.png" class="d-inline-block col-8 col-md-9  col-sm-6 " alt=""></a>
+	 <a class="navbar-brand d-lg-none d-md-none d-sm-none d-block" href="#"><img src="images/logo-icon.png" class="col-6"></a>
+	</div>
+	 <div class="col-xl-7 d-flex align-items-center">
+	<div class="dropdown d-flex align-items-center d-md-none d-sm-none d-none d-lg-block ms-3">
+<a href="#"><i class="fa fa-map-marker fs-5 btn-clr text-dark" aria-hidden="true"></i></a>
+  <button
+    class="btn bg-white btn-clr text-dark border-0 py-lg-4  dropdown-toggle"
+    type="button"
+    id="dropdownMenuButton"
+    data-mdb-toggle="dropdown"
+    aria-expanded="false">
+ New York
+  </button>
+  <ul class="dropdown-menu new-york border-0" aria-labelledby="dropdownMenuButton">
+    <li><a class="dropdown-item" href="#"><small>Los Angeles</small></a></li>
+    <li><a class="dropdown-item" href="#"><small>Chicago</small></a></li>
+    <li><a class="dropdown-item" href="#"><small>Houston</small></a></li>
+    <li><a class="dropdown-item" href="#"><small>Philadelphia</small></a></li>
+    <li><a class="dropdown-item" href="#"><small>San Diego</small></a></li>
+    <li><a class="dropdown-item" href="#"><small>Miami</small></a></li>
+  </ul>
+</div>
+<div class="dropdown d-flex align-items-center me-lg-3  d-md-none d-none d-sm-none d-lg-block">
+  <button
+    class="btn bg-white btn-clr text-dark border-0 py-lg-4  "
+    type="button"
+    id="dropdownMenuButton"
+    data-mdb-toggle="dropdown"
+    aria-expanded="false"
+  >
+ Cuisine
+  </button>
+  <ul class="dropdown-menu new-york border-0 p-0" aria-labelledby="dropdownMenuButton">
+  <div class="d-flex">
+    <li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/burger.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">burgers & fries</a></h5> </li>
+	<li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/noodles.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">Noodles</a></h5></li> 
+	<li class="col-xl-6 text-center bg-white px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/pizza.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">pizza & pasta</a></h5> </li>
+	</div>
+   <div class="d-flex ">
+    <li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/steak.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">grill & steaks</a></h5> </li>
+	<li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/fish.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">fish & seafood</a></h5></li> 
+	<li class="col-xl-6 text-center bg-white px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/healthy.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">healthy food</a></h5> </li>
+	</div>
+    <div class="d-flex ">
+    <li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/cuisine.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">haute cuisine</a></h5> </li>
+	<li class="col-xl-6 text-center px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/chicken.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">chiken & snaks</a></h5></li> 
+	<li class="col-xl-6 text-center bg-white px-lg-2 py-lg-2"><a class="dropdown-item" href="#"><img src="images/coffee.svg" style="width:70px;"></a>
+	<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">coffee & desserts</a></h5> </li>
+	</div>
+  </ul>
+</div>
+<div class=" d-md-none d-sm-none d-lg-block d-none">
+<a href="#" class="text-dark text-decoration-none">Back to main demo</a>
+</div>
+</div>
+	<div class="col-xl-3 col-lg-4 col-md-9  col-sm-0 justify-content-end  d-flex ">   
+    <div class="accordion" id="accordionExample">
+  <div>
+    <h2 class="accordion-header" id="headingOne">
+      <button  type="button " data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"class="border-0 bg-white">
+     <i class="fa fa-search fs-4 pb-2" aria-hidden="true"></i> 
+      </button>
+    </h2>
+  </div>
+</div>
+	<button type="button" class="border-0 bg-white" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">
+	<i class="fa fa-user fs-4 ms-4" aria-hidden="true"></i>
+	</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content form-top">
+      <div class="modal-header px-0 mx-0 pt-4">
+	  <div class="col-12">
+	  <ul class="nav ps-2 justify-content-between nav-pills mb-3" id="pills-tab" role="tablist">
+  <li class="nav-item sign-up" role="presentation">
+    <button class="border-0 sign-up text-black-50 bg-white" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa fa-unlock-alt me-2 " aria-hidden="true"></i><b>Sign in</b></button>
+  </li>
+  <li class="nav-item sign-up col-8" role="presentation">
+    <button class="border-0  sign-up text-black-50 bg-white ps-0" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa fa-user me-2" aria-hidden="true"></i><b>Sign up</b></button>
+  </li>
+   <div class="modal-footer border-0 p-0 m-0">
+        <button type="button" class="border-0 bg-white text-black-50" data-bs-dismiss="modal"><i class="fa fa-times fs-5" aria-hidden="true"></i></button>
+  </div>
+</ul>
+<form>
+<div class="tab-content px-4" id="pills-tabContent">
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+  <div class="form-outline mb-2">
+  <label class="form-label mt-3 fs-6" for="form1Example1"><b>Email address</b></label>
+    <input type="email" id="form1Example1" placeholder="johndoe@example.com"class="form-control" /> 
+  </div>
+  <div class="form-outline mb-4">
+   <label class="form-label fs-6" for="form1Example2"><b>Password</b></label>
+    <input type="password" id="form1Example2" class="form-control" />
+  </div>
+  <div class="row mb-4">
+    <div class="col d-flex ">
+      <div class="form-check">
+        <input class="form-check-input  bg-danger text-white" type="checkbox" value="" id="form1Example3" checked />
+        <label class="form-check-label " for="form1Example3"> Remember me </label>
+      </div>
+    </div>
+    <div class="col d-flex justify-content-end">
+      <a href="#!"class="text-decoration-none text-danger">Forgot password?</a>
+    </div>
+  </div>
+  <button type="submit" class="btn w-100 bg-danger text-white btn-block">Sign in</button>
+</form>  
+ </div>
+ <div class="tab-pane  fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+ <form>
+  <div class="form-outline mb-2">
+  <label class="form-label mt-3 fs-6" for="form1Example1"><b>Full name</b></label>
+    <input type="text" id="form1Example1" placeholder="John Doe"class="form-control" /> 
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="johndoe@example.com" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn w-100 py-2 bg-danger text-white btn-block">Sign in</button>
+</form>
+ </div>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</div>
+</div>
+  <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+	<form class="input-group">
+	<div class="icon-position">
+	<i class="fa fa-search" aria-hidden="true"></i>
+	</div>
+    <input type="text" placeholder="What do you need?" aria-label="default input example" class="w-100 py-2 px-4 input border-0">
+		</form>
+      </div>
+    </div>
+<div class="container-fluid p-0">
+  <div class="card  text-white border-0 justify-content-center pt-lg-5 bg-food-img pd-bot">
+  <div class=" text-center  ">
+  <div class="col-12 col-xl-6 col-md-7 col-sm-8 mx-auto mt-lg-5 pt-4 mt-3 pt-lg-0" id="top">
+  <p class="card-text mt-0 mx-3 mt-md-0 mt-lg-5 pt-lg-5 fs-5 mb-sm-0 mb-md-2 mb-lg-1">#1 Food Delivery Service since 2010</p>
+   <h5 class="card-title h1 mb-lg-3">We deliver your favorite food fresh & fast in 
+    <button class="btn-secondary dropdown-toggle bg-transparent border-0 h1 text-danger" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">New York</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    <li><button class="dropdown-item" type="button">Action</button></li>
+    <li><button class="dropdown-item" type="button">Another action</button></li>
+    <li><button class="dropdown-item" type="button">Something else here</button></li>
+  </ul>
+</h5>
+   <button type="button" class="btn btn-danger mt-lg-4 mt-4 mt-md-4 mt-sm-3 py-2 px-3">what do you want to eat?</button>
+    </div>
+    </div>
+</div>
+</div>
+    <div class="container-fluid pb-md-1">
+   <div class="col-12 text-center pt-0 pt-lg-5 mt-5 pb-4 pt-md-5 pt-sm-3 mt-md-3 pb-md-4 mb-md-2 mb-sm-2 mb-2 mb-lg-4 pb-lg-0">
+   <h1 class="fs-2">Trending food in your city</h1>
+   <p class="text-muted mt-2 px-2 mt-lg-0 px-lg-0 mt-md-2 pt-md-1 pt-sm-1">Choose what you want and we dilever it to you</p>
+  </div>
+   <div class="row flex-sm-row flex-column pb-sm-4">
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 px-sm-3">
+    <div class="card h-100 border-0 shadow mb-5">
+      <img src="images/01.jpg" class="card-img-top" alt="...">
+      <div class="card-body bg-white rounded-3">
+<h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">burgers & fries</a></h5> 
+      </div> 
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 px-sm-3">
+    <div class="card h-100 border-0 shadow mb-5">
+      <img src="images/02.jpg" class="card-img-top" alt="...">
+      <div class="card-body bg-white rounded-3">
+        <h5 class="card-title text-center text-capitalize h5 mt-1 py-2"><a href="#"class="text-black-50 text-decoration-none">Noodles</a></h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 px-sm-3 mt-sm-4 pt-sm-1 mt-lg-0">
+    <div class="card h-100 border-0 shadow mb-5">
+      <img src="images/03.jpg" class="card-img-top" alt="...">
+      <div class="card-body bg-white rounded-3">
+        <h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">sushi & rolles</a></h5>
+      </div>
+    </div>
+  </div>
+ 
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 mt-md-2 px-sm-3 mt-sm-4 pt-sm-1">
+    <div class="card h-100 border-0 shadow mb-5">
+      <img src="images/04.jpg" class="card-img-top" alt="">
+      <div class="card-body bg-white rounded-3 ">
+        <h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">pizza & pasta</a></h5> 
+      </div> 
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 mt-md-2 px-sm-3 mt-sm-4 pt-sm-1">
+    <div class="card h-100 border-0 shadow mb-5">
+      <img src="images/05.jpg" class="card-img-top" alt="...">
+      <div class="card-body bg-white rounded-3">
+        <h5 class="card-title text-center text-capitalize h5 mt-1 py-2"><a href="#"class="text-black-50 text-decoration-none">coffee & desserts</a></h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4 co-lg-4 mb-md-4 px-md-3 mt-md-2 px-sm-3 mt-sm-4 pt-sm-1">
+    <div class="card h-100 border-0 shadow mb-4">
+      <img src="images/06.jpg" class="card-img-top" alt="...">
+      <div class="card-body bg-white rounded-3">
+        <h5 class="card-title text-center text-capitalize h5 mt-1 py-2 "><a href="#"class="text-black-50 text-decoration-none">healthy & food</a></h5>
+      </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<div class="card bg-dark text-white mt-5 mt-md-1 border-0 mb-5 mb-sm-0 bg-red-img">
+<div class="container-fluid "> 
+  <div class="row offset-xl-2 me-md-4">
+ <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt-sm-5 pt-sm-5 text-center text-sm-start px-0 ps-2 ps-sm-3 ms-0 col-xl-6 ps-md-3 mt-sm-2">
+   <h2 class="card-title pt-sm-5 fw-bold pt-lg-3 mb-md-3 mt-5 me-2 mb-3">Order food on the go with Cartzilla App</h2>
+    <p class="card-text pe-sm-5 pe-lg-5 me-lg-5 mt-6 fs-6 px-3 px-sm-0 d-sm-none d-lg-block d-md-block pe-md-1 pb-md-1 text-white-50">Pay with in app wallet, collect loyalty points, track your orders in real time and much more.</p>
+	<div class=" d-flex align-items-sm-start flex-sm-column flex-md-row flex-lg-row mt-4 mt-md-4pt-2 align-items-center flex-column mt-sm-4 pt-sm-3">
+ <button class="btn btn-dark app-button mb-2 mb-sm-2 d-flex flex-lg-row  me-4 align-items-center text-sm-start ">
+    <i class="fa fa-apple fs-3"></i>
+	<div class="d-flex flex-column ms-sm-3 d-sm-inline-block">
+      <span><small class="fw-light">Download on the </small></span>
+      <h3 class="mb-0 fs-6 text-lg-start"><b>App Store</b></h3>
+   </div> 
+</button>
+ <button class="btn btn-dark app-button mb-2 mb-sm-3 d-flex flex-lg-row align-items-center me-lg-4 text-sm-start">
+    <i class="fa fa-play fs-3"></i>
+      <div class="d-flex flex-column ms-sm-3 d-sm-inline-block ">
+      <span><small class="fw-light">Download on the </small></span>
+         <h3 class="mb-0 fs-6 text-lg-start"><b>Google Play</b></h3>
+ </div>
+ </button>
+ </div>
+ </div>
+   <div class="col-lg-6 col-md-6 col-sm-6 col-12 mt-sm-5 text-center mt-5 py-0 m-0 p-0 pt-md-3 mt-md-5 pt-sm-4">
+  	<img src="images/phone.png" class="card-img mobile-img mob-img" style="width:290px;" alt="..."> 
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+ <div class="row d-flex justify-content-between my-5 py-4 pb-2 py-sm-0 mx-md-2 ">
+ <div class="col-sm-12 col-lg-6 col-md-12 col-12 mt-md-4 mb-md-4">
+<div class="card mb-3 become border-0 " >
+  <div class="row ">
+    <div class="col-sm-7 ">
+      <div class="card-body mt-4   py-sm-5 text-center text-sm-start  ms-sm-0 ms-lg-5 m-0 p-0 ms-md-5 ms-sm-5">
+        <h5 class="card-title fs-2 pt-sm-3 pt-lg-0">Become a Courier </h5>
+        <p class="card-text mt-2 mb-4 mx-3">Earn competitive salary as delivery courier working flexible schedule.</p>
+		<button type="button" class="btn btn-lg btn-primary bg-danger border-danger px-4 py-sm-2 fs-6">Start earning</button>
+      </div>
+    </div>
+	 <div class="col-sm-5 text-center text-md-end">
+      <img src="images/courier.png" style="width:254px;" class="rounded-3"  alt="...">
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-sm-12 col-lg-6 col-md-12 col-12 mt-md-4 mb-md-4 mt-2 mt-lg-2 ">
+<div class="card mb-3 bg-y border-0 mt-sm-3">
+  <div class="row  ">
+    <div class="col-sm-7 ">
+      <div class="card-body mt-4 py-sm-5 text-center text-sm-start  ms-sm-0 ms-lg-5 m-0 p-0 ms-md-5 ms-sm-5">
+        <h5 class="card-title fs-2 ">Become a Partner</h5>
+        <p class="card-text mt-2 mb-4 px-1 mx-4">Grow your business by reaching new customers.</p>
+        <button type="button" class="btn btn-lg btn-primary bg-danger border-danger px-4 py-sm-2 fs-6">Partner with us</button>
+      </div>
+    </div>
+	<div class="col-sm-5 text-center  text-md-end">
+      <img src="images/chef.png" style="width:252px;" class="rounded-3" alt="...">
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class="col-12 text-center mt-sm-5  pt-md-4 mb-5 pb-2">
+ <h1 class="fs-1 mx-2 mb-md-2 mb-sm-2">Popular restaurants in your city</h1>
+   <p class="text-muted">Check the best restaurants near you</p>
+</div>
+  <div class="row text-center px-lg-0 px-0 px-sm-0 mt-sm-5 flex-sm-row flex-lg-row flex-row mt-md-5 pt-md-4 pt-sm-3">
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mb-5">
+	<div class="shadow-sm rounded-3 py-lg-4 ">
+	<img src="images/01.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mb-5">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/02.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5  mb-5">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/03.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mb-5 mt-sm-5 mt-md-0 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/04.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/05.png" class="col-lg-6 col-sm-9 col-12">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/06.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/07.png" class="col-lg-6 col-sm-9  col-12">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/08.png" class="col-lg-6 col-sm-9 col-12">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/09.png" class="col-lg-6 col-sm-9 col-12">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/10.png" class="col-lg-6 col-sm-9 col-12">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/11.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+    <div class="col-md-3 col-sm-4 col-lg-3 col-6 mb-sm-5 mt-sm-5 mb-5 mt-md-4 mt-3">
+	<div class="shadow-sm rounded-3 py-lg-4">
+	<img src="images/12.png" class="col-lg-6 col-sm-9 col-12 ">
+	</div>
+	</div>
+  </div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+     <div class="carousel-item active">
+	<div class="container-fluid bg-light pt-5 px-md-0">
+  <div class="col-12 text-center py-5">
+  <h2 class="text-black-50">Customer reviews</h2>
+  </div>
+  <div class="row pb-5">
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+      <i class="fa fa-star ps-3 " aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	  </div>
+      <div class="card-body pt-sm-1 pt-1">
+       <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+	  <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4 mt-4 bg-light">
+      <button class="  mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+       <img src="images/1.jpg" class="w-25 rounded-circle">
+		 <div class="d-flex flex-column ms-sm-3 text-black-50">
+ <span class=" text-capitalize"><b>laura willson</b></span>
+     <h3 class="mb-0 fs-6 text-start"><small>Feb 05,2020</small></h3>
+   </div>
+  </button>
+</div>
+      </div>
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+     <i class="fa fa-star  ps-3 " aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	 </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+    <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4 mt-4 bg-light">
+      <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+<img src="images/01 (1).jpg" class="w-25 rounded-circle">
+	 <div class="d-flex flex-column ms-sm-3 text-black-50">
+  <span class=" text-capitalize"><b>mary alice grant</b></span>
+       <h3 class="mb-0 fs-6 text-start"><small>Jan 27,2020</small></h3>
+</div>
+ </button>
+ </div>
+ </div>  
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+     <i class="fa fa-star  ps-3" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	 </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+<div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+    <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+     <img src="images/01 (2).jpg" class="w-25 rounded-circle">
+<div class="d-flex flex-column ms-sm-3 text-black-50">
+     <span class=" text-capitalize"><b>rafael marquez</b></span>
+ <h3 class="mb-0 fs-6 text-start"><small>Dec 19,2020</small></h3>
+  </div>
+ </button>
+      </div>
+      </div>  	  
+<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5 ">
+<div class="bg-white rounded-3 ps-md-1">
+<div class=" text-warning">
+      <i class="fa fa-star  ps-3" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+      <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+      <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+           <img src="images/02 (1).jpg" class="w-25 rounded-circle">			
+<div class="d-flex flex-column ms-sm-3 text-black-50">
+  <span class=" text-capitalize"><b>adrian lewis</b></span>
+     <h3 class="mb-0 fs-6 text-start"><small>Dec 13,2020</small></h3>
+</div>
+ </button>
+ </div>
+ </div>
+</div>   
+   </div>
+   </div>
+    <div class="carousel-item">
+	  <div class="d-flex ">
+	 <div class="container-fluid bg-light pt-5 px-md-0">
+  <div class="col-12 text-center py-5">
+  <h2 class="text-black-50">Customer reviews</h2>
+  </div>
+  <div class="row pb-5">
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+      <i class="fa fa-star ps-3 " aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	  </div>
+      <div class="card-body pt-sm-1 pt-1">
+       <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+	  <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+      <button class="  mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+       <img src="images/03 (2).jpg" class="w-25 rounded-circle">
+		 <div class="d-flex flex-column ms-sm-3 text-black-50">
+ <span class=" text-capitalize"><b>rechard davis</b></span>
+     <h3 class="mb-0 fs-6 text-start"><small>Feb 14,2020</small></h3>
+   </div>
+  </button>
+</div>
+      </div>
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+     <i class="fa fa-star  ps-3 " aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	 </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+    <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+      <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+<img src="images/03 (1).jpg" class="w-25 rounded-circle">
+	 <div class="d-flex flex-column ms-sm-3 text-black-50">
+  <span class=" text-capitalize"><b>daniel adams</b></span>
+       <h3 class="mb-0 fs-6 text-start"><small>Des o4,2020</small></h3>
+</div>
+ </button>
+ </div>
+ </div>  
+	<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+	<div class="bg-white rounded-3 ps-md-1">
+	<div class=" text-warning">
+     <i class="fa fa-star  ps-3" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+	 </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+<div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+    <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+     <img src="images/01 (2).jpg" class="w-25 rounded-circle">
+<div class="d-flex flex-column ms-sm-3 text-black-50">
+     <span class=" text-capitalize"><b>rafael marquez</b></span>
+ <h3 class="mb-0 fs-6 text-start"><small>Dec 19,2020</small></h3>
+  </div>
+ </button>
+      </div>
+      </div>    
+<div class="col-sm-6 col-lg-3 col-md-4 col-12  pb-5">
+<div class="bg-white rounded-3 ps-md-1">
+<div class=" text-warning">
+      <i class="fa fa-star  ps-3" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  <i class="fa fa-star" aria-hidden="true"></i>
+	  </div>
+      <div class="card-body pt-sm-1 pt-1">
+        <p class="card-text pe-4 pe-sm-2 text-black-50"><small><b>Lorum ipsum doloar sit amet,quia non consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></b></p>
+      </div>
+      </div>
+      <div class=" d-flex  align-items-center ps-5 ms-3 ms-sm-4  mt-4 bg-light">
+      <button class=" mb-3 d-flex flex-row me-4 align-items-center  border-0 bg-light">
+           <img src="images/02 (1).jpg" class="w-25 rounded-circle">			
+<div class="d-flex flex-column ms-sm-3 text-black-50">
+  <span class=" text-capitalize"><b>adrian lewis</b></span>
+     <h3 class="mb-0 fs-6 text-start"><small>Dec 13,2020</small></h3>
+</div>
+ </button>
+ </div>
+ </div>
+</div>   
+   </div>
+      </div>
+    </div>
+    </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+ <div class="bg-dark">
+ <div class="container-fluid mt-sm-3">
+ <div class="row  px-lg-3 pt-md-5 pt-sm-5 pt-lg-0">
+ <div class="col-xl-2 col-md-4 col-sm-4 mt-lg-5 pt-md-2 pt-sm-2 pt-lg-0 pt-5 mb-5 pb-5">
+ <img src="images/footer-logo-light.png" style="width:127px;">
+ </div>
+  <div class="col-xl-2 col-md-4 col-sm-4 mt-lg-5  pt-md-2 pt-sm-2 pt-lg-0 mb-5">
+  <h2 class="text-white fs-5">Join us</h2>
+ <ul class="text-white-50 p-0">
+ <li class="mb-1 mt-3"><small>Careers</small></li>
+ <li class="mb-1"><small>Restaurents</small></li>
+ <li  class="mb-1"><small>Become a Courier</small></li>
+ <li  class="mb-1"><small>About</small></li>
+ </ul>
+ </div>
+  <div class="col-xl-2 col-md-4 col-sm-4 mt-lg-5  pt-md-2 pt-sm-2 pt-lg-0 mb-5">
+ <h2 class="text-white  fs-5">Let us help you</h2>
+ <ul class="text-white-50  p-0" >
+ <li  class="mb-1 mt-3"><small>Help center</small></li>
+ <li  class="mb-1"><small>Support</small></li>
+ <li  class="mb-1"><small>Contacts</small></li>
+ </ul>
+ </div>
+  <div class="col-xl-2 col-md-4 col-sm-4 mt-lg-5 mt-md-4 mt-sm-3 mb-5">
+ <h2 class="text-white  fs-5">Follow us</h2>
+ <ul class="text-white-50  p-0" >
+ <li  class="mb-1 mt-3"><small>Facebook</small></li>
+ <li  class="mb-1"><small>Twitter</small></li>
+ <li  class="mb-1"><small>Instagram</small></li>
+ </ul>
+ </div>
+  <div class="col-xl-4 col-md-6 col-sm-7 mt-lg-5 mt-md-4 mt-sm-3 mb-5">
+ <h2 class="text-white fs-5">Download our app</h2>
+ <div class=" d-flex align-items-sm-start flex-sm-row flex-md-row flex-lg-row mt-4 align-items-center flex-column">
+ <button class="btn btn-dark app-button mb-2 mb-sm-3 d-flex flex-lg-row align-items-center text-sm-start border-light px-2 me-3"><i class="fa fa-apple fs-3"></i>
+	<div class="d-flex flex-column ms-sm-2 d-sm-inline-block">
+      <span><small class="fw-light">Download on the </small></span>
+      <h3 class="mb-0 fs-6 text-lg-start">App Store</h3>
+   </div> 
+</button>
+ <button class="btn btn-dark app-button mb-2 mb-sm-3 d-flex flex-lg-row align-items-center text-sm-start border-light px-2">
+    <i class="fa fa-play fs-3"></i>
+      <div class="d-flex flex-column ms-sm-2 d-sm-inline-block ">
+      <span><small class="fw-light">Download on the </small></span>
+         <h3 class="mb-0 fs-6 text-lg-start">Google Play</h3>
+ </div>
+ </button>
+ </div>
+ </div>
+ </div>
+ <div class="bg-white mx-lg-3 mt-5 "style="height:1px;">
+ <hr>
+ </div>
+ <div class="row py-lg-5 py-md-4 mt-sm-5 pb-sm-4 mt-md-3 px-lg-3 px-sm-0 justify-content-between">
+ <div class=" text-white-50 col-xl-3 col-md-5 col-sm-12 text-sm-center px-sm-0 mb-sm-3" >
+   <small>© All rights reserved. Made by Createx Studio</small>
+  </div>
+  <div class="col-xl-4 col-md-5 col-sm-12 px-sm-0">
+  <ul class=" text-white d-flex justify-content-between justify-content-sm-center" >
+  <li class="px-sm-3"><small>Privacy policy</small></li>
+  <li  class="px-sm-3"><small>Terms & conditions</small></li>
+  <li  class="px-sm-3"><small>Cookies policy</small></li>
+   </ul>
+  </div>
+  </div>
+  <div class="col-xl-12 text-end position-fixed end-icon #top">
+   <a href="#" class="text-white"><i class="fa fa-angle-up fs-2" aria-hidden="true"></i></a>
+  </div>
+ </div>
+ </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+ </body>
+</html>
